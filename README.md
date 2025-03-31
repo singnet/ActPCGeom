@@ -1,7 +1,7 @@
 **Proposal for Research Initiative: Enhancing Predictive Coding Neural Learning via Information Geometry**
 
 **Principal Investigator:** Charlie Derr  
-**Collaborators:** Faezeh Habibi (primary collaborator), other potential team members (Bezawit, Daniel)
+**Collaborators:** Faezeh Habibi (primary collaborator), other potential team members (Bezawit Abebaw, Daniel MacDonald)
 
 **Research Context:**
 This initiative aims to extend and enhance the Neural Generative Coding (NGC) framework developed by Alex Ororbia's lab at MIT, to which Faezeh Habibi has contributed significantly. The overarching goal, proposed by Ben Goertzel, is to explore the application of information geometry metrics—specifically Fisher-Rao and Wasserstein—to accelerate and improve neural learning performance within predictive coding models.
@@ -27,7 +27,7 @@ The modular framework will allow for seamless integration of these approximated 
 - Evaluation of the necessity and optimal strategy for concurrent training loops (main NGClearn loop and approximation mechanism loop) will be explored, initially focusing on establishing suitable synchronization and cadence between these loops.
 
 **Team Contributions:**
-Charlie Derr will lead framework development, system modularity design, and integration strategies. Faezeh Habibi’s prior contributions and expertise with the NGC package will be essential, providing both domain-specific insight and direct assistance in developing computational approximations. Additional support may be sought from Bezawit, Daniel, or other qualified members as necessary, acknowledging that substantial effort will involve collaborative learning and development.
+Charlie Derr will lead framework development, system modularity design, and integration strategies. Faezeh Habibi’s prior contributions and expertise with the NGC package will be essential, providing both domain-specific insight and direct assistance in developing computational approximations. Additional support may be sought from Bezawit Abebaw, Daniel MacDonald, and/or other qualified members as necessary, acknowledging that substantial effort will involve collaborative learning and development.
 
 **Expected Outcomes:**
 - A robust, scalable, and modular software framework integrating information geometry-based approximations into predictive coding.
