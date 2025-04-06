@@ -34,3 +34,7 @@ Charlie Derr will lead framework development, system modularity design, and inte
 - Empirical validation of the improved effectiveness and efficiency of neural learning with information geometry metrics.
 - Documentation facilitating future extensions and applications across diverse machine learning paradigms.
 
+**Authors of this document:**
+- Charlie Derr
+- ChatGPT4.5 
+- Ben Goertzel (provided the prompt to ChatGPT to improve what Charlie Derr had initially written)
