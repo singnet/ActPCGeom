@@ -4,7 +4,7 @@
 **Collaborators:** Faezeh Habibi (primary collaborator), other potential team members (Bezawit Abebaw, Daniel MacDonald)
 
 **Research Context:**
-This initiative aims to extend and enhance the Neural Generative Coding (NGC) framework[1] developed by Alex Ororbia's lab at RIT[2], to which Faezeh Habibi has contributed significantly. The overarching goal, proposed by Ben Goertzel, is to explore the application of information geometry metrics—specifically Fisher-Rao and Wasserstein—to accelerate and improve neural learning performance within predictive coding models.
+This initiative aims to extend and enhance the [Neural Generative Coding (NGC) framework](https://github.com/NACLab/ngc-learn/) developed by [Alex Ororbia's lab at RIT](https://github.com/NACLab/), to which Faezeh Habibi has contributed significantly. The overarching goal, proposed by Ben Goertzel, is to explore the application of information geometry metrics—specifically Fisher-Rao and Wasserstein—to accelerate and improve neural learning performance within predictive coding models.
 
 **Objectives:**
 1. Integrate and leverage the existing NAClab NGClearn package as the foundational framework for predictive coding neural training.
@@ -39,5 +39,4 @@ Charlie Derr will lead framework development, system modularity design, and inte
 - ChatGPT4.5 
 - Ben Goertzel (provided the prompt to ChatGPT to improve what Charlie Derr had initially written)
 
-[1] [title](https://github.com/NACLab/ngc-learn/)
-[2] [title](https://github.com/NACLab/)
+
