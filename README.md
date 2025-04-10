@@ -34,6 +34,10 @@ Charlie Derr will lead framework development, system modularity design, and inte
 - Empirical validation of the improved effectiveness and efficiency of neural learning with information geometry metrics.
 - Documentation facilitating future extensions and applications across diverse machine learning paradigms.
 
+**Resources In Play**
+- Jira: https://singularitynet.atlassian.net/jira/software/projects/ACTPC/boards/369
+- Github: https://github.com/singnet/ActPCGeom
+
 **Authors of this document:**
 - Charlie Derr
 - ChatGPT4.5 
