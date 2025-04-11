@@ -1,6 +1,6 @@
 #### Language
 
-There are 2 primary components. Here's a proposal for what we call them (certainly open to improvement if anyone has any better ideas):
+There are 2 primary components, each of which is itself a machine learning process. Here's a proposal for what we call them (certainly open to improvement if anyone has any better ideas):
 1. **core learning**
 2. **information geometry metric approximating**
 
@@ -35,3 +35,5 @@ For each of those, a number of approximation attempts should be evaluated:
 - In terms of scale, how much data needs to be fed into the **core learning** process so that the information geometry metrics will be able to bring value? Are there scale issues that make experimentation on smaller data sets inadequate?
 
 - Will it make sense to try to combine the two information geometry metrics (rather than just trying one or the other) in order to use a hybrid/combinatorial metric?
+
+- Is it folly to try to construct some sort of domain-independent meta-structure, within which we can plug all sorts of different learning tasks in very different domains for all this?
