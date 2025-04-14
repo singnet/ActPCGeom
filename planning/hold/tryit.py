@@ -1,4 +1,6 @@
 # putting more info on tool used and prompt in commit message (before even trying to run it!)
+#
+# and now putting first error in next commit message (color me cynical, but my guess is that after debugging this
 import numpy as np
 
 # Simple predictive coding network
