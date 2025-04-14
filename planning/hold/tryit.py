@@ -1,3 +1,4 @@
+# putting more info on tool used and prompt in commit message (before even trying to run it!)
 import numpy as np
 
 # Simple predictive coding network
