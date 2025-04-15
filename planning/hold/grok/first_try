@@ -228,3 +228,50 @@ print("Training completed.")
 - **Performance**: This model focuses on reconstruction (autoencoder-like). For classification, you’d need additional components (e.g., a classifier layer).
 
 If you want to extend this (e.g., add classification, visualize reconstructions, or adjust the architecture), let me know, and I can provide further details!
+
+
+
+
+And the tracebacks from trying to run (seemed better than what copilot did for me yesterday though?):
+
+(snet31) ni@singbuntu24:~/snet31/my_stuff$ python3 grok-pc-1st-attempt.py 
+Missing configuration file. Attempted to locate file at "json_files/config.json". Default Config will be used. 
+See https://ngc-learn.readthedocs.io/en/latest/tutorials/model_basics/configuration.html for additional information
+2025-04-15 04:51:54.890814: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1744707114.952419   11061 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1744707114.972893   11061 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1744707115.085997   11061 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1744707115.086044   11061 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1744707115.086046   11061 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1744707115.086048   11061 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+11490434/11490434 ━━━━━━━━━━━━━━━━━━━━ 0s 0us/step 
+Traceback (most recent call last):
+  File "/home/ni/snet31/my_stuff/grok-pc-1st-attempt.py", line 123, in <module>
+    circuit.evolve(t=i * 1.0, dt=1.0)
+  File "/home/ni/snet31/lib/python3.12/site-packages/ngcsimlib/compilers/command_compiler.py", line 153, in _wrapped
+    vals = command(Get_Compartment_Batch(), **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ni/snet31/lib/python3.12/site-packages/ngcsimlib/compilers/command_compiler.py", line 97, in compiled
+    vals = exc(**kwargs, **_comps)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ni/snet31/lib/python3.12/site-packages/ngcsimlib/compilers/component_compiler.py", line 111, in compiled
+    return pure_fn.__func__(**funParams, **funArgs, **funComps)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ni/snet31/lib/python3.12/site-packages/ngclearn/components/synapses/hebbian/hebbianSynapse.py", line 188, in _evolve
+    dWeights, dBiases = HebbianSynapse._compute_update(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ni/snet31/lib/python3.12/site-packages/ngclearn/components/synapses/hebbian/hebbianSynapse.py", line 178, in _compute_update
+    dW, db = _calc_update(
+             ^^^^^^^^^^^^^
+  File "/home/ni/snet31/lib/python3.12/site-packages/ngclearn/components/synapses/hebbian/hebbianSynapse.py", line 39, in _calc_update
+    dW = jnp.matmul(_pre.T, _post)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ni/snet31/lib/python3.12/site-packages/jax/_src/numpy/tensor_contractions.py", line 243, in matmul
+    out = lax.dot_general(
+          ^^^^^^^^^^^^^^^^
+TypeError: dot_general requires contracting dimensions to have the same shape, got (32,) and (1,).
+--------------------
+For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.
+(snet31) ni@singbuntu24:~/snet31/my_stuff$ 
